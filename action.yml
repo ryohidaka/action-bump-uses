@@ -1,7 +1,13 @@
-# https://docs.github.com/en/actions/sharing-automations/creating-actions/creating-a-composite-action
+name: "action-bump-uses"
 
-name: "Hello World"
-description: "Greet someone"
+author: "ryohidaka"
+
+description: "GitHub Actions to update the version of the `uses` documented in the README."
+
+branding:
+  color: green
+  icon: send
+
 inputs:
   who-to-greet: # id of input
     description: "Who to greet"
@@ -11,12 +17,10 @@ outputs:
   random-number:
     description: "Random number"
     value: ${{ steps.random-number-generator.outputs.random-number }}
+
 runs:
   using: "composite"
   steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
     - name: Set Greeting
       run: echo "Hello $INPUT_WHO_TO_GREET."
       shell: bash
@@ -29,10 +33,8 @@ runs:
       shell: bash
 
     - name: Set GitHub Path
-      run: echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
+      run: echo "GITHUB_ACTION_PATH=${GITHUB_ACTION_PATH}" >> $GITHUB_ENV
       shell: bash
-      env:
-        GITHUB_ACTION_PATH: ${{ github.action_path }}
 
     - name: Run goodbye.sh
       run: $GITHUB_ACTION_PATH/scripts/goodbye.sh
