@@ -8,6 +8,28 @@ branding:
   color: green
   icon: send
 
+inputs:
+  # commit options
+  commit-user-name:
+    required: false
+    default: "GitHub Actions"
+    description: "Commit username. Defaults to 'GitHub Actions'."
+
+  commit-user-email:
+    required: false
+    default: "actions@github.com"
+    description: "Commit email. Defaults to 'actions@github.com'."
+
+  commit-message:
+    required: false
+    default: "chore: Bump uses version"
+    description: "Commit message. Defaults to 'chore: Bump uses version'."
+
+  dry-run:
+    description: "If true, the commit and push steps will be skipped."
+    required: false
+    default: "false"
+
 runs:
   using: "composite"
   steps:
@@ -35,3 +57,12 @@ runs:
       shell: bash
       env:
         RELEASE_VERSION: ${{ env.RELEASE_VERSION }}
+
+    - name: Commit and Push
+      if: env.RELEASE_VERSION != '' && inputs.dry-run == 'false'
+      run: |
+        $GITHUB_ACTION_PATH/scripts/commit-push.sh \
+          "${{ inputs.commit-user-name }}" \
+          "${{ inputs.commit-user-email }}" \
+          "${{ inputs.commit-message }}"
+      shell: bash

@@ -10,3 +10,12 @@ GitHub Actions to update the version of the `uses` documented in the README.
 ```yml
 - uses: ryohidaka/action-bump-uses@v1
 ```
+
+## Inputs
+
+| Input               | Description                                         | Default                      |
+| ------------------- | --------------------------------------------------- | ---------------------------- |
+| `commit-user-name`  | Commit username.                                    | `GitHub Actions`             |
+| `commit-user-email` | Commit email.                                       | `actions@github.com`         |
+| `commit-message`    | Commit message.                                     | `chore: Format ShellScripts` |
+| `dry-run`           | If true, the commit and push steps will be skipped. | `false`                      |
