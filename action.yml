@@ -27,3 +27,11 @@ runs:
         fi
         echo "RELEASE_VERSION=$LATEST_VERSION" >> $GITHUB_ENV
       shell: bash
+
+    - name: Update README.md with release version
+      if: env.RELEASE_VERSION != ''
+      run: |
+        $GITHUB_ACTION_PATH/scripts/update-readme.sh "${{ github.repository }}" "$RELEASE_VERSION"
+      shell: bash
+      env:
+        RELEASE_VERSION: ${{ env.RELEASE_VERSION }}
