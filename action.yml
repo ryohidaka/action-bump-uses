@@ -17,3 +17,13 @@ runs:
     - name: Set GitHub Path
       run: echo "GITHUB_ACTION_PATH=${GITHUB_ACTION_PATH}" >> $GITHUB_ENV
       shell: bash
+
+    - name: Get latest release version
+      run: |
+        LATEST_VERSION=$($GITHUB_ACTION_PATH/scripts/get-version.sh "${{ github.repository }}")
+        if [ -z "$LATEST_VERSION" ]; then
+          echo "No new version available, skipping update."
+          exit 0
+        fi
+        echo "RELEASE_VERSION=$LATEST_VERSION" >> $GITHUB_ENV
+      shell: bash
