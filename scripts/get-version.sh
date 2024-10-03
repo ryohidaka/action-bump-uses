@@ -10,7 +10,7 @@ LATEST_VERSION=$(curl -s https://api.github.com/repos/$REPO/releases/latest | jq
 
 # Check if there is no latest release available
 if [ "$LATEST_VERSION" == "null" ]; then
-	exit 0 # Exit with success status, no action needed
+    exit 0 # Exit with success status, no action needed
 fi
 
 # Output the latest version found
