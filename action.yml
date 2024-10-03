@@ -1,12 +1,12 @@
-name: "action-bump-uses"
+name: "Bump Uses"
 
 author: "ryohidaka"
 
 description: "GitHub Actions to update the version of the `uses` documented in the README."
 
 branding:
-  color: green
-  icon: send
+  color: blue
+  icon: refresh-cw
 
 inputs:
   # commit options

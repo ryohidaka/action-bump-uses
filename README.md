@@ -1,4 +1,4 @@
-# action-bump-uses
+# Bump Uses
 
 [![GitHub Release](https://img.shields.io/github/v/release/ryohidaka/action-bump-uses)](https://github.com/ryohidaka/action-bump-uses/releases/)
 [![Test Action](https://github.com/ryohidaka/action-bump-uses/actions/workflows/test.yml/badge.svg)](https://github.com/ryohidaka/action-bump-uses/actions/workflows/test.yml)
