@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/ryohidaka/action-bump-uses/compare/v0.1.0...v0.2.0) (2024-10-04)
+
+
+### Features
+
+* Changeed Commit and Push processes to `ryohidaka/action-commit-push`. ([d87526b](https://github.com/ryohidaka/action-bump-uses/commit/d87526b9c847341e78cc82c02e13d7430672bd79))
+
 ## 0.1.0 (2024-10-03)
 
 
