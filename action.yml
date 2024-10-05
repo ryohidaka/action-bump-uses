@@ -60,6 +60,9 @@ runs:
 
     - name: Commit and Push
       if: env.RELEASE_VERSION != '' && inputs.dry-run == 'false'
-      uses: ryohidaka/action-commit-push@v0.1.0
-      with:
-        files: "README.md"
+      run: |
+        $GITHUB_ACTION_PATH/scripts/commit-push.sh \
+          "${{ inputs.commit-user-name }}" \
+          "${{ inputs.commit-user-email }}" \
+          "${{ inputs.commit-message }}"
+      shell: bash
