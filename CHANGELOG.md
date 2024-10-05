@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/ryohidaka/action-bump-uses/compare/v0.2.0...v0.2.1) (2024-10-05)
+
+
+### Bug Fixes
+
+* Revert "feat: Changeed Commit and Push processes to `ryohidaka/action-commit-push`." ([f843c12](https://github.com/ryohidaka/action-bump-uses/commit/f843c1290dabb35f9349bd18edc2b5254e3ca500))
+
 ## [0.2.0](https://github.com/ryohidaka/action-bump-uses/compare/v0.1.0...v0.2.0) (2024-10-04)
 
 
