@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/ryohidaka/action-bump-uses/compare/v0.3.0...v0.3.1) (2024-10-10)
+
+
+### Bug Fixes
+
+* Remove unused script. ([08ff4b1](https://github.com/ryohidaka/action-bump-uses/commit/08ff4b1568af7583bdc2ea57c4ef36692ba3ea73))
+
 ## [0.3.0](https://github.com/ryohidaka/action-bump-uses/compare/v0.2.1...v0.3.0) (2024-10-10)
 
 
