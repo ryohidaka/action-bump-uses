@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/ryohidaka/action-bump-uses/compare/v0.3.1...v0.4.0) (2025-04-25)
+
+
+### Features
+
+* Change default commit-user-name and commit-user-email. ([e0fdf82](https://github.com/ryohidaka/action-bump-uses/commit/e0fdf820fef83ebf960af6cd69fba599dcbdda50))
+
 ## [0.3.1](https://github.com/ryohidaka/action-bump-uses/compare/v0.3.0...v0.3.1) (2024-10-10)
 
 
