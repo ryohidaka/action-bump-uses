@@ -17,7 +17,7 @@ jobs:
   bump-uses:
     runs-on: ubuntu-latest
     steps:
-      - uses: ryohidaka/action-bump-uses@v0.3.1
+      - uses: ryohidaka/action-bump-uses@v0.4.0
         with:
           commit-user-name: "github-actions[bot]"
           commit-user-email: "41898282+github-actions[bot]@users.noreply.github.com"
